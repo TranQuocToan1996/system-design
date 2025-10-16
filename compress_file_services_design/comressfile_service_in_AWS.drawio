@@ -1,0 +1,148 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
+  <diagram name="Page-1" id="lDs8NBGTMfXHEj88b-tu">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-24" value="&lt;font color=&quot;#2e2e2e&quot;&gt;&lt;span style=&quot;background-color: rgb(198, 198, 198);&quot;&gt;8. Multipart upload Directly S3&lt;/span&gt;&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-1" target="QvNgBASB3wqj0yKe2p3b-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-1" value="Client" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-17" value="&lt;font color=&quot;#121212&quot;&gt;&lt;span style=&quot;background-color: rgb(222, 222, 222);&quot;&gt;3. Request presign-URL Object storage&lt;/span&gt;&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-3" target="QvNgBASB3wqj0yKe2p3b-4">
+          <mxGeometry x="0.2" y="60" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="780" y="230" />
+              <mxPoint x="780" y="230" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-3" target="QvNgBASB3wqj0yKe2p3b-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-35" value="4. Save pending status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="QvNgBASB3wqj0yKe2p3b-25">
+          <mxGeometry x="-0.3" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-3" value="Upload services" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-4" value="S3&lt;br&gt;Storage object&lt;br&gt;Upload bucket" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="810" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-10" value="1.POST /upload/presign-url" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.226;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-1">
+          <mxGeometry x="-0.0804" y="30" relative="1" as="geometry">
+            <mxPoint x="339.03999999999996" y="229.3800000000001" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-11" value="Metadata&lt;br&gt;DB and Cache&lt;br&gt;Cluster" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-16" value="&lt;font color=&quot;#121212&quot;&gt;&lt;span style=&quot;background-color: rgb(222, 222, 222);&quot;&gt;2. Route request Upload&lt;/span&gt;&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-14">
+          <mxGeometry x="-0.0769" y="20" relative="1" as="geometry">
+            <mxPoint x="590" y="230" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-14" value="API gateway" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-18" value="&lt;span style=&quot;color: rgb(222, 222, 222); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(46, 46, 46); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;5. Return&lt;/span&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-4" target="QvNgBASB3wqj0yKe2p3b-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="150" as="sourcePoint" />
+            <mxPoint x="650" y="100" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-19" value="&lt;span style=&quot;color: rgb(46, 46, 46); background-color: rgb(198, 198, 198);&quot;&gt;6. Return&lt;/span&gt;" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-3" target="QvNgBASB3wqj0yKe2p3b-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="250" as="sourcePoint" />
+            <mxPoint x="490" y="250" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-14" target="QvNgBASB3wqj0yKe2p3b-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="150" as="sourcePoint" />
+            <mxPoint x="650" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-45" value="&lt;span style=&quot;color: rgb(46, 46, 46); background-color: rgb(198, 198, 198);&quot;&gt;7. Return&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="QvNgBASB3wqj0yKe2p3b-20">
+          <mxGeometry x="-0.1294" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-23" target="QvNgBASB3wqj0yKe2p3b-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-28" value="9. AWS event after&lt;br&gt;&amp;nbsp;upload success" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="QvNgBASB3wqj0yKe2p3b-27">
+          <mxGeometry x="-0.2" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-23" value="S3&lt;br&gt;Storage object&lt;br&gt;Upload bucket" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-26" target="QvNgBASB3wqj0yKe2p3b-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-47" value="11. Compressing&lt;br&gt;And save to S3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="QvNgBASB3wqj0yKe2p3b-31">
+          <mxGeometry x="-0.0444" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-26" target="QvNgBASB3wqj0yKe2p3b-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-34" value="12. Update status compression" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="QvNgBASB3wqj0yKe2p3b-32">
+          <mxGeometry x="-0.3938" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-26" target="QvNgBASB3wqj0yKe2p3b-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-39" value="13. Notification&lt;br&gt;User" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" connectable="0" vertex="1" parent="QvNgBASB3wqj0yKe2p3b-38">
+          <mxGeometry x="0.0545" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-26" value="Compression&lt;br&gt;Step_function&lt;br&gt;&amp;nbsp;and workers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-30" target="QvNgBASB3wqj0yKe2p3b-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-30" value="S3&lt;br&gt;Storage object&lt;br&gt;Compression bucket" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-33" value="Policy cleanup file for a day" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="170" y="395" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-37" value="API gateway" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-180" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-40" value="14. Notification&lt;br&gt;Comression status&lt;br&gt;Websocket" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-37" target="QvNgBASB3wqj0yKe2p3b-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="480" as="sourcePoint" />
+            <mxPoint x="570" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-46" value="10.Get Metadata" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="QvNgBASB3wqj0yKe2p3b-26" target="QvNgBASB3wqj0yKe2p3b-11">
+          <mxGeometry x="0.0044" y="2" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="860" as="sourcePoint" />
+            <mxPoint x="480" y="510" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QvNgBASB3wqj0yKe2p3b-49" value="Option CloudFront&lt;br&gt;CDN" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="730" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
